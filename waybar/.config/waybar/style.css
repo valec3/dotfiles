@@ -1,0 +1,79 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent; /* Fondo transparente para efecto flotante */
+    color: #ffffff;
+}
+
+/* Estilo para cada "pastilla" de módulo */
+#cpu,
+#memory,
+#temperature,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    padding: 0 12px; /* Un poco menos de padding lateral */
+    margin: 6px 3px; /* Más margen superior para que flote mejor */
+    background-color: #282a36;
+    border-radius: 12px; /* Bordes un poco menos circulares para estilo moderno */
+    transition: all 0.3s ease; /* Efecto suave si pasas el mouse */
+}
+
+/* Hover efecto: cuando pasas el mouse por encima de una pastilla */
+#cpu:hover,
+#memory:hover,
+#clock:hover,
+#pulseaudio:hover {
+    background-color: #44475a;
+}
+/* Mejorar la legibilidad del texto de red */
+#network {
+    color: #8be9fd; /* Un color cyan para la red */
+}
+
+/* Colores específicos para que sea más intuitivo */
+#clock {
+    color: #bd93f9; /* Morado */
+    font-weight: bold;
+}
+
+#cpu {
+    color: #50fa7b; /* Verde */
+}
+
+#memory {
+    color: #ffb86c; /* Naranja */
+}
+
+#pulseaudio {
+    color: #f1fa8c; /* Amarillo */
+}
+
+#battery.charging {
+    color: #50fa7b;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #ff5555;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #282a36;
+        color: #ff5555;
+    }
+}
