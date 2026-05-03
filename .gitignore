@@ -1,0 +1,22 @@
+# Historiales (¡Peligro! Suelen tener contraseñas en texto plano)
+.zsh_history
+.bash_history
+.node_repl_history
+
+# Secretos y llaves (NUNCA subir esto)
+**/.ssh/*
+**/certs/*
+**/*.pem
+**/*.key
+.env
+.netrc
+
+# Carpetas de sistema y basura
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Plugins descargados (Mejor dejar que el script los descargue)
+**/plugins/zsh-autosuggestions
+**/plugins/zsh-syntax-highlighting
